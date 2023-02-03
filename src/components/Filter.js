@@ -5,10 +5,11 @@ import { DataContext } from './DataProvider'
 export const Filter = () => {
     const [themeDark, setThemeDark, todos, setTodos, filter, setFilter] = useContext(DataContext)
 
-    console.log(todos);
+    console.log({ todos });
 
 
     const handleClearCompleted = () => {
+        console.log("handle completed");
         const newTodos = [...todos]
         const clearCompleted = newTodos.filter((t) => {
             return t.complete === false

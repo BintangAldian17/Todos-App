@@ -2,23 +2,23 @@ import React, { useState, useEffect, createContext } from 'react'
 
 export const DataContext = createContext();
 
-export const DataProvider = (props) => {
-
-
-    const getLocalTodos = () => {
-        let todoStore = localStorage.getItem('todoStore');
-        // console.log(todoStore);
-
-        if (todoStore) {
-            return JSON.parse(localStorage.getItem('todoStore'))
-        } else {
-            return []
-        }
+const getLocalTodos = () => {
+    let todoStore = localStorage.getItem('todoStore');
+    if (todoStore) {
+        return JSON.parse(localStorage.getItem('todoStore'))
+    } else {
+        return []
     }
+}
 
+
+export const DataProvider = (props) => {
+    const todosLocal = getLocalTodos()
     const [themeDark, setThemeDark] = useState(true)
-    const [todos, setTodos] = useState(getLocalTodos())
+    const [todos, setTodos] = useState(todosLocal)
     const [filter, setFilter] = useState("all")
+
+
 
 
     useEffect(() => {
