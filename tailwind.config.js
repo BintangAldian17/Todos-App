@@ -5,9 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        body: ['Josefin Sans', 'sans-serif'],
+      },
       colors: {
         'BgDark': '#161722',
-        'BgLight': '	#e4e5f1',
+        'BgLight': '		#e4e5f1',
         'primarydark': '#25273c',
         'secondarydark': '#4d5066',
         'thirddark': '	#e4e5f1',
@@ -21,7 +24,8 @@ module.exports = {
       backgroundImage: {
         'BgImgDark': "url('./assets/images/bg-desktop-dark.jpg')",
         'BgImgLight': "url('./assets/images/bg-desktop-light.jpg')",
-        'BgImgDarkMob': "url('./assets/images/bg-mobile-dark.jpg')"
+        'BgImgDarkMob': "url('./assets/images/bg-mobile-dark.jpg')",
+        'BgImgLightMob': "url('./assets/images/bg-mobile-light.jpg')"
       },
     },
   },
