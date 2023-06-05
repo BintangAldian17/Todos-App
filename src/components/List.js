@@ -15,7 +15,6 @@ export const List = () => {
                 todo.complete = !todo.complete
             }
         });
-        console.log("switch complete", newTodos)
         setTodos(newTodos)
     }
 
@@ -59,7 +58,6 @@ export const List = () => {
 
             case "completed":
                 const completedTodos = todos.filter((t) => t.complete === true)
-                console.log({ completedTodos });
                 if (completedTodos.length === 0) {
                     return <div className=' text-center py-20'>
                         <h1 className={`text-3xl ${themeDark ? ' text-secondarydark' : ' text-secondarylight'}`}>Completed todos are empty</h1>

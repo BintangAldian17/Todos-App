@@ -15,7 +15,7 @@ export const Todo = () => {
     }
     return (
         // <DataContext.Consumer>
-        < div className={` h-screen ${themeDark ? " bg-BgDark text-thirddark" : "  text-primarylight"}  relative `
+        < div className={` h-screen ${themeDark ? " bg-BgDark text-thirddark" : "  text-primarylight"} transition-all ease-in-out duration-300 relative `
         }>
             <div className={`${themeDark ? "lg:bg-BgImgDark bg-BgImgDarkMob" : "lg:bg-BgImgLight bg-BgImgLightMob"}  bg-no-repeat bg-cover lg:h-[40vh] h-[30vh]`}>
                 <div className=' absolute right-1/2 translate-x-1/2  h-full lg:w-[70vh] w-full px-5 lg:px-0 lg:pt-20 pt-16 flex flex-col max-h-screen' >
